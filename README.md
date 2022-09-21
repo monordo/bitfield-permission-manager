@@ -1,4 +1,6 @@
-# bitfield-permission-manager[![stability][0]][1]
+# bitfield-permission-manager
+[![npm version][2]]https://www.npmjs.com/package/@monordo/bitfield-permission-manager
+
 [![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
 ![MonOrdo logo](https://www.monordo.com/wp-content/uploads/2022/06/MonOrdo.jpg)
@@ -12,6 +14,8 @@ This library is developed to use the [Bit field](https://en.wikipedia.org/wiki/B
 **Official documentation:** [https://monordo.gitbook.io/bitfield-permission-manager/](https://monordo.gitbook.io/bitfield-permission-manager/)
 
 **NPM details:** [https://www.npmjs.com/package/@monordo/bitfield-permission-manager](https://www.npmjs.com/package/@monordo/bitfield-permission-manager)
+
+
 
 
 [0]: https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square
