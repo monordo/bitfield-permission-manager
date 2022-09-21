@@ -1,6 +1,6 @@
 {
   "name": "@monordo/bitfield-permission-manager",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "MonOrdo library for manage permissions with bitfield system",
   "main": "lib/index.js",
   "scripts": {
@@ -13,9 +13,18 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
   },
-  "author": "MonOrdo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/monordo/bitfield-permission-manager.git"
+  },
+  "bug": {
+    "url" : "https://github.com/monordo/bitfield-permission-manager/issues/new",
+    "email" : "axel@monordo.com"
+  },
+  "homepage": "https://github.com/monordo/bitfield-permission-manager",
+  "author": "Cariz",
   "private": false,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.7.18",
