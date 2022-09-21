@@ -20,7 +20,7 @@ This library is developed to use the [Bit field](https://en.wikipedia.org/wiki/B
 
 [0]: https://img.shields.io/badge/%20coverage%20-100-green?style=flat-square
 [1]: https://img.shields.io/github/workflow/status/monordo/bitfield-permission-manager/publish?style=flat-square
-[2]: https://img.shields.io/npm/v/github-standard-labels.svg?style=flat-square
+[2]: https://img.shields.io/npm/v/@monordo/bitfield-permission-manager.svg?style=flat-square
 [3]: https://www.npmjs.com/package/@monordo/bitfield-permission-manager
 [4]: https://img.shields.io/travis/yoshuawuyts/github-standard-labels/master.svg?style=flat-square
 [5]: https://travis-ci.org/yoshuawuyts/github-standard-labels
