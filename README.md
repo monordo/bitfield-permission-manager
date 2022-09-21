@@ -1,5 +1,5 @@
 # bitfield-permission-manager
-[![npm version][2]]https://www.npmjs.com/package/@monordo/bitfield-permission-manager
+![npm version][https://www.npmjs.com/package/@monordo/bitfield-permission-manager]]
 
 [![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
