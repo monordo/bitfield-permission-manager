@@ -1,0 +1,47 @@
+{
+  "name": "@monordo/bitfield-permission-manager",
+  "version": "0.0.5",
+  "description": "MonOrdo library for manage permissions with bitfield system",
+  "main": "lib/index.js",
+  "scripts": {
+    "new-version": "node ci-version-control.ts",
+    "start:dev": "ts-node src/posology-converter.ts",
+    "build": "tsc",
+    "prebuild": "rm -rf ./lib ./node_modules && npm install",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "author": "MonOrdo",
+  "private": false,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.7.18",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import-newlines": "^1.1.5",
+    "eslint-plugin-unused-imports": "^1.1.5",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "ts-jest": "^28.0.8",
+    "typescript": "^4.2.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.1.1",
+    "@nestjs/core": "^9.1.1",
+    "@nestjs/graphql": "^10.1.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.5.6"
+  }
+}

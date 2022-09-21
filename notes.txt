@@ -1,0 +1,18 @@
+
+bitFieldPermission.compute(params: number[], initial?: number): number
+
+bitFieldPermission.revokePermissions(params: number[]): number
+
+bitFieldPermission.addPermissions(initial: number, params: number[]): number
+
+bitFieldPermission.hasPermissions(permission: number, query: PermissionQuery): number[]
+
+type PermissionQuery = [
+    [OR, OR, OR], // AND
+    [OR, OR, OR], // AND
+    [OR, OR, OR], // AND
+]
+
+
+
+
