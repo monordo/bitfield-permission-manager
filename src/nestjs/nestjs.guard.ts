@@ -5,7 +5,6 @@ import { GqlExecutionContext } from '@nestjs/graphql';
 
 export const Permissions = (query: bigint[][]) => SetMetadata('BTFpermissions', query);
 
-
 @Injectable()
 export class BitfieldPermissionGuard implements CanActivate {
   constructor(
