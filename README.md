@@ -1,4 +1,6 @@
-# bitfield-permission-manager
+# bitfield-permission-manager[![stability][0]][1]
+[![npm version][2]][3] [![build status][4]][5]
+[![downloads][8]][9] [![js-standard-style][10]][11]
 ![MonOrdo logo](https://www.monordo.com/wp-content/uploads/2022/06/MonOrdo.jpg)
 
 ❤️ **This library is developed and maintained by MonOrdo** ❤️
