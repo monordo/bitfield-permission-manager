@@ -1,5 +1,5 @@
 # bitfield-permission-manager
-![badge][0] ![build][1]
+![badge][0] ![Build Status][1]
 
 [![npm version][2]][3] [![build status][4]][5]
 [![downloads][8]][9] [![js-standard-style][10]][11]
@@ -19,7 +19,7 @@ This library is developed to use the [Bit field](https://en.wikipedia.org/wiki/B
 
 
 [0]: https://img.shields.io/badge/%20coverage%20-100-green?style=flat-square
-[1]: https://img.shields.io/github/workflow/status/monordo/bitfield-permission-manager/publish?event=tag&style=flat-square
+[1]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fmonordo%2Fbitfield-permission-manager%2Fbadge%3Fref%3Dmain&style=flat-square
 
 [2]: https://img.shields.io/npm/v/@monordo/bitfield-permission-manager.svg?style=flat-square
 [3]: https://www.npmjs.com/package/@monordo/bitfield-permission-manager
