@@ -3,10 +3,10 @@ import { BitfieldManagerModule } from "./bitfield-manager.module";
 import { BitfieldProvider } from "./providers/bitfield.provider";
 
 export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => {
-    const app = await NestFactory.createApplicationContext(
-        BitfieldManagerModule,
-        { logger: false },
-    );
+  const app = await NestFactory.createApplicationContext(
+    BitfieldManagerModule,
+    { logger: false },
+  );
 
-    return app.get(BitfieldProvider);
+  return app.get(BitfieldProvider);
 };
