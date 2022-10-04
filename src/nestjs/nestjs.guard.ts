@@ -1,7 +1,7 @@
 import { CanActivate, ExecutionContext, Injectable, SetMetadata } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
-import { BitfieldProvider } from "@providers";
 import { GqlExecutionContext } from '@nestjs/graphql';
+import { BitfieldProvider } from "..";
 
 export const Permissions = (query: bigint[][]) => SetMetadata('BTFpermissions', query);
 
