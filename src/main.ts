@@ -13,23 +13,3 @@ export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => 
 
   return app.get(BitfieldProvider);
 };
-
-
-export class UserPermissions extends AbstractPermissionModel {
-  @Perm(2)
-  static readonly toto: Permission;
-
-  @Perm(3)
-  static readonly titi: Permission;
-}
-
-(async () => {
-
-  const manager = await bitfieldPermissionManager()
-
-  const perm = manager.compute([ UserPermissions.toto.value  ])
-
-  console.log(UserPermissions.titi.can(perm))
-
-  console.log(UserPermissions.can(perm));
-})();
