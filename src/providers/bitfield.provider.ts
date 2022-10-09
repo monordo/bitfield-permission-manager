@@ -6,8 +6,6 @@ export class BitfieldProvider {
 
   static numberToBitfield(number: number): bigint { return BigInt((1n << BigInt(number))) }
 
-  numberToBitfield(number: number): bigint { return BigInt((1n << BigInt(number))) }
-
   addPermission = (permissions: bigint, bit: bigint): bigint => !this.hasPermission(permissions, bit) ? permissions | bit : permissions
 
   addPermissions = (permissions: bigint, bits: bigint[]): bigint => {

@@ -1,4 +1,4 @@
-import { BitfieldProvider } from "..";
+import { BitfieldProvider } from "../providers";
 import { AbstractPermission } from "../abstracts";
 
 export class Permission extends AbstractPermission {
