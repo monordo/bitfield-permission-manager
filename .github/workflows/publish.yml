@@ -19,6 +19,9 @@ jobs:
       
       - name: 🏗️ Setup Node (CI)
         run: npm ci
+      
+      - name: 🏗️ Install nest CI
+        run: npm install -g @nestjs/cli
 
       - name: 🏗️ Setup Tools (battila7/get-version-action@v2)
         id: get_version
