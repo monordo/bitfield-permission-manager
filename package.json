@@ -6,7 +6,7 @@
   "scripts": {
     "new-version": "node ci-version-control.ts",
     "start:dev": "ts-node src/posology-converter.ts",
-    "build": "tsc",
+    "build": "nest build",
     "prebuild": "rm -rf ./lib ./node_modules && npm install",
     "test": "jest",
     "test:watch": "jest --watch",
