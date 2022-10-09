@@ -1,3 +1,4 @@
+import { Permission } from "../tools";
 import { BitfieldProvider } from "..";
 
 const isPermissionMetaKey = Symbol("isPermission");
@@ -5,12 +6,21 @@ const isPermissionMetaKey = Symbol("isPermission");
 export function Perm(permission: number): PropertyDecorator {
     return (target, key): void => {
         let original = target[key];
-        original = BitfieldProvider.numberToBitfield(permission);
+        original = new Permission(
+            BitfieldProvider.numberToBitfield(permission),
+            permission,
+            key.toString()
+        )
+        
         Reflect.deleteProperty(target, key);
         Reflect.defineProperty(target, key, {
             get: () => original,
             set: newVal => {
-                original = BitfieldProvider.numberToBitfield(newVal);
+                original = new Permission(
+                    BitfieldProvider.numberToBitfield(newVal),
+                    newVal,
+                    key.toString()
+                )
             },
             enumerable: false,
             configurable: false
