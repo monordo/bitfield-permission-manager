@@ -1,3 +1,4 @@
+// import { PermissionBatch, PermissionKeyType } from "@/dtos/permission.dto"
 import { Logger } from "@nestjs/common"
 
 export class BitfieldProvider {
@@ -34,4 +35,13 @@ export class BitfieldProvider {
     const andArray = query.map((bits) => this.hasPermissionsOR(permisisons, bits))
     return andArray.find((bit) => !bit) === undefined
   }
+
+  // testBatch = <T extends PermissionKeyType = string>(
+  //   permissions: bigint,
+  //   permissionBatch: PermissionBatch<T>,
+  // ): T[] => {
+  //   const keys = Object.keys(permissionBatch)
+  //   const results = keys.map((key) => this.test(permissions, [[ permissionBatch[key] ]]))
+  //   return keys.filter((key, index) => results[index]) as T[]
+  // }
 }
