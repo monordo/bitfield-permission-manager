@@ -1,9 +1,10 @@
-import { Logger } from "@nestjs/common"
+import { Injectable, Logger } from "@nestjs/common"
 
+@Injectable()
 export class BitfieldProvider {
   logger = new Logger(BitfieldProvider.name)
 
-  static numberToBitfield = (number: number): bigint => BigInt((1n << BigInt(number)))
+  static numberToBitfield(number: number): bigint { return BigInt((1n << BigInt(number))) }
 
   addPermission = (permissions: bigint, bit: bigint): bigint => !this.hasPermission(permissions, bit) ? permissions | bit : permissions
 
