@@ -1,9 +1,6 @@
 import { NestFactory } from "@nestjs/core";
-import { AbstractPermissionModel } from "./abstracts/permissions-model.abstract";
 import { BitfieldManagerModule } from "./bitfield-manager.module";
-import { Perm } from "./decorators";
-import { BitfieldProvider } from "./providers/bitfield.provider";
-import { Permission } from "./tools";
+import { BitfieldProvider } from "./providers";
 
 export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => {
   const app = await NestFactory.createApplicationContext(
