@@ -1,5 +1,5 @@
 {
-  "name": "@monordo/bitfield-permission-manager",
+  "name": "@open-monordo/bitfield-permission-manager",
   "version": "0.0.1",
   "description": "MonOrdo library for manage permissions with bitfield system",
   "main": "lib/index.js",
