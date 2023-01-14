@@ -5,3 +5,4 @@ export * from "./bitfield-manager.module";
 export { Perm } from "./decorators";
 export * from "./tools";
 export * from "./abstracts";
+export * from "./wrappers";
