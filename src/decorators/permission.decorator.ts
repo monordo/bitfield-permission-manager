@@ -9,7 +9,7 @@ export function Perm(permission: number): PropertyDecorator {
     original = new Permission(
       BitfieldProvider.numberToBitfield(permission),
       permission,
-      key.toString()
+      `${target['name']}.${key.toString()}`
     )
 
     Reflect.deleteProperty(target, key);
@@ -19,8 +19,8 @@ export function Perm(permission: number): PropertyDecorator {
         original = new Permission(
           BitfieldProvider.numberToBitfield(newVal),
           newVal,
-          key.toString()
-        )
+          `${target['name']}.${key.toString()}`
+          )
       },
       enumerable: false,
       configurable: false

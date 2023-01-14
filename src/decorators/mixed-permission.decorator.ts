@@ -8,8 +8,8 @@ export function MixedPerm(...permissions: Array<Permission | MixedPermission>[])
         let original = target[key];
         original = new MixedPermission(
             permissions,
-            key.toString()
-        )
+            `${target['name']}.${key.toString()}`
+            )
 
         Reflect.deleteProperty(target, key);
         Reflect.defineProperty(target, key, {
