@@ -46,6 +46,7 @@ export class BitfieldWrapper {
    * @return {string | null} - Returns null if has permissions, otherwise returns string array of missing permissions
    */
   hasPermissionsOR = (permissions: bigint | string, bits: Permission[]): string[] | null => {
+    if (bits.length === 0) return null
     let has: boolean = bits.some((bit) => this.hasPermission(permissions, bit))
     return !has ? bits.map((bit) => bit.name) : null
   }
