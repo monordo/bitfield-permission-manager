@@ -29,4 +29,14 @@ export class MixedPermission extends AbstractPermission {
     const formated = this.permissions.map((permissions) => permissions.map((permission) => permission.value));
     return new BitfieldProvider().test(permissions, formated);
   }
+
+  toCompute(): Permission[] {
+    const perms = [];
+    this.permissions.forEach((permissions) => {
+      permissions.forEach((permission) => {
+        perms.push(permission);
+      });
+    });
+    return perms;
+  }
 }
