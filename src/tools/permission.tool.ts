@@ -1,5 +1,6 @@
 import { BitfieldProvider } from "../providers";
 import { AbstractPermission } from "../abstracts";
+import { BitfieldWrapper } from "..";
 
 export class Permission extends AbstractPermission {
   name: string;
@@ -15,7 +16,7 @@ export class Permission extends AbstractPermission {
     this.name = name;
   }
 
-  can(permissions: bigint): boolean {
-    return new BitfieldProvider().test(permissions, [[this.value]]);
+  can(permissions: bigint | string): boolean {
+    return !(new BitfieldWrapper(new BitfieldProvider()).test(permissions, [[this]]));
   }
 }
