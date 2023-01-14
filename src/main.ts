@@ -5,14 +5,21 @@ import { Perm } from "./decorators";
 import { BitfieldProvider } from "./providers";
 import { Permission } from "./tools";
 import { bitfieldSqlWhereBuilder } from "./tools/sql-builder.tool";
+import { BitfieldWrapper } from ".";
 
-export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => {
+export const bitfieldPermissionManager = async (): Promise<{
+  provider: BitfieldProvider;
+  wrapper: BitfieldWrapper;
+}> => {
   const app = await NestFactory.createApplicationContext(
     BitfieldManagerModule,
     { logger: false },
   );
 
-  return app.get(BitfieldProvider);
+  return {
+    provider: app.get(BitfieldProvider),
+    wrapper: app.get(BitfieldWrapper)
+  }
 };
 
 
@@ -62,7 +69,8 @@ export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => 
 
 
 // (async () => {
-//   // const bitfieldManager = await bitfieldPermissionManager();
+//   const app = await bitfieldPermissionManager();
+
 
 //   // console.log(permissions.owner)
 //   // console.log(GroupAccountPermissions.REMOVE_ACCOUNT, GroupAccountPermissions.UPDATE_GROUP_INFO)
@@ -73,25 +81,25 @@ export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => 
 //   // ])
 //   // console.log(perm, bitfieldManager.hasPermission(perm, permissions.read));
 
-//   bitfieldSqlWhereBuilder("permissions", [
-//     []
-//   ]);
-//   console.log('\n//////////////////////////////////\n')
+//   // bitfieldSqlWhereBuilder("permissions", [
+//   //   []
+//   // ]);
+//   // console.log('\n//////////////////////////////////\n')
 
-//   bitfieldSqlWhereBuilder("permissions", [
-//     [GroupAccountPermissions.ADMIN, GroupAccountPermissions.UPDATE_GROUP_INFO],
-//   ]);
-//   console.log('\n//////////////////////////////////\n')
+//   // bitfieldSqlWhereBuilder("permissions", [
+//   //   [GroupAccountPermissions.ADMIN, GroupAccountPermissions.UPDATE_GROUP_INFO],
+//   // ]);
+//   // console.log('\n//////////////////////////////////\n')
 
-//   bitfieldSqlWhereBuilder("permissions", [
-//     [GroupAccountPermissions.ADMIN, GroupAccountPermissions.UPDATE_GROUP_INFO],
-//     [GroupAccountPermissions.REMOVE_ACCOUNT, GroupAccountPermissions.DELETE_ADDRESS],
-//   ]);
+//   // bitfieldSqlWhereBuilder("permissions", [
+//   //   [GroupAccountPermissions.ADMIN, GroupAccountPermissions.UPDATE_GROUP_INFO],
+//   //   [GroupAccountPermissions.REMOVE_ACCOUNT, GroupAccountPermissions.DELETE_ADDRESS],
+//   // ]);
 
-//   console.log('\n//////////////////////////////////\n')
+//   // console.log('\n//////////////////////////////////\n')
 
-//   bitfieldSqlWhereBuilder("permissions", [
-//     [GroupAccountPermissions.ADMIN],
-//     [GroupAccountPermissions.ADMIN],
-//   ]);
+//   // bitfieldSqlWhereBuilder("permissions", [
+//   //   [GroupAccountPermissions.ADMIN],
+//   //   [GroupAccountPermissions.ADMIN],
+//   // ]);
 // })()

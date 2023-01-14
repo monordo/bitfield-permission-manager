@@ -1,11 +1,12 @@
 import { Injectable, Logger } from "@nestjs/common"
-import { BitfieldProvider, Permission } from "..";
+import { BitfieldProvider } from "../providers/bitfield.provider";
+import { Permission } from "..";
 
 @Injectable()
 export class BitfieldWrapper {
   logger = new Logger(BitfieldWrapper.name)
 
-  constructor(protected readonly provider: BitfieldProvider) {}
+  constructor(private readonly provider: BitfieldProvider) {}
 
   addPermission = (permissions: bigint | string, bit: bigint | string | Permission): bigint => {
     let fBit = typeof bit === "string" ? BigInt(bit) : bit

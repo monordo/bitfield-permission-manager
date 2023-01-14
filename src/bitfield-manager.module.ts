@@ -3,7 +3,7 @@ import { BitfieldProvider } from './providers';
 import { BitfieldWrapper } from './wrappers';
 
 @Module({
-  providers: [BitfieldProvider, BitfieldWrapper],
+  providers: [BitfieldWrapper, BitfieldProvider],
   exports: [BitfieldProvider, BitfieldWrapper],
   imports: [],
 })
