@@ -37,11 +37,9 @@ export class BitfieldWrapper {
   }
 
   hasPermission = (permissions: bigint | string, bit: bigint | string | Permission): boolean => {
-    const fBit = typeof bit === "string" ? BigInt(bit) : bit
-    return this.provider.hasPermission(
-      typeof permissions === "string" ? BigInt(permissions) : permissions,
-      typeof fBit === "bigint" ? fBit : (bit as Permission).value,
-    )
+    const fBit = typeof bit === "string" ? BigInt(bit) : typeof bit === "bigint" ? bit : (bit as Permission).value
+    const fperms = typeof permissions === "string" ? BigInt(permissions) : permissions
+    return this.provider.hasPermission(fperms, fBit)
   }
 
   /*
