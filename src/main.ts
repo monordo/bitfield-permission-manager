@@ -1,19 +1,19 @@
-// import { NestFactory } from "@nestjs/core";
-// import { AbstractPermissionModel } from "./abstracts";
-// import { BitfieldManagerModule } from "./bitfield-manager.module";
-// import { Perm } from "./decorators";
-// import { BitfieldProvider } from "./providers";
-// import { Permission } from "./tools";
-// import { bitfieldSqlWhereBuilder } from "./tools/sql-builder.tool";
+import { NestFactory } from "@nestjs/core";
+import { AbstractPermissionModel } from "./abstracts";
+import { BitfieldManagerModule } from "./bitfield-manager.module";
+import { Perm } from "./decorators";
+import { BitfieldProvider } from "./providers";
+import { Permission } from "./tools";
+import { bitfieldSqlWhereBuilder } from "./tools/sql-builder.tool";
 
-// export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => {
-//   const app = await NestFactory.createApplicationContext(
-//     BitfieldManagerModule,
-//     { logger: false },
-//   );
+export const bitfieldPermissionManager = async (): Promise<BitfieldProvider> => {
+  const app = await NestFactory.createApplicationContext(
+    BitfieldManagerModule,
+    { logger: false },
+  );
 
-//   return app.get(BitfieldProvider);
-// };
+  return app.get(BitfieldProvider);
+};
 
 
 // export const permissions = {
