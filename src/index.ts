@@ -1,8 +1,6 @@
 export * from "./nestjs";
 export * from "./main";
-export * from "./providers";
 export * from "./bitfield-manager.module";
-export { Perm } from "./decorators";
-export * from "./tools";
-export * from "./abstracts";
-export * from "./wrappers";
+export * from "@open-monordo/bitfield-permission-manager-core/lib/decorators";
+export * from "@open-monordo/bitfield-permission-manager-core/lib/abstracts";
+export * from "@open-monordo/bitfield-permission-manager-core/lib/tools";
